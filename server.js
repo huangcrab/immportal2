@@ -13,7 +13,7 @@ const { applyMiddleware } = require("./utils");
 // 3a. Require general middleware
 const middleWare = require("./middleware");
 // 3b. Require error handling middleware
-const errorHandlers = require("./middleware/errorHandlers");
+//const errorHandlers = require("./middleware/errorHandlers");
 
 // 4. Require routes
 const { router: userRoutes } = require("./routes/users/userRoutes");
@@ -48,7 +48,7 @@ router.use("/api/applications", applicationRoutes);
 router.use("/api/applicationForms", applicationFormRoutes);
 
 // 8. Apply error handling middleware (meaningfully last)
-applyMiddleware(errorHandlers, router);
+//applyMiddleware(errorHandlers, router);
 
 // 9. Create a server from express instance
 const server = http.createServer(router);
